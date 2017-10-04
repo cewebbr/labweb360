@@ -1,0 +1,7 @@
+{% if site.env == 'dev' %}
+    <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ "js/lib/require.js" | prepend: page.baseurl }}" data-main="{{ "js/main" | prepend: page.baseurl }}"></script>
+{% else %}
+	<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ "js/main-min.js" | prepend: page.baseurl }}"></script>
+{% endif %}

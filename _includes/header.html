@@ -1,0 +1,26 @@
+  <!-- HEADER -->
+  <header class="header-wrapper">
+  	<div class="content">
+  		<div class="header-content">
+	  		{% if page.url == '/' %}
+				<h1 class="header-logo"><img src="{{ "img/logos/logo.svg" | prepend: page.baseurl }}" alt="LabWeb 360"></h1>
+			{% else %}
+				<a href="{{ "" | prepend: page.baseurl }}" class="header-logo"><img src="{{ "img/logos/logo.svg" | prepend: page.baseurl }}" alt="LabWeb 360"></a>
+	  		{% endif %}
+			<div id="js-navigation-wrapper" class="navigation-wrapper flow-opposite">
+				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">
+					<span class="navigation-toogler__text">Menu</span><span class="navigation-toogler__burguer">&nbsp;</span>
+				</button>
+		  		<nav id="js-navigation" class="navigation" role="navigation">
+		  			<ul class="navigation-list" id="js-navigation-list">
+		  				<li class="navigation-list__item"><a href="{{ "#melhores-praticas" | prepend: page.baseurl }}" class="navigation-list__anchor">Melhores práticas</a></li>
+		  				<li class="navigation-list__item"><a href="{{ "#galeria" | prepend: page.baseurl }}" class="navigation-list__anchor">Galeria de vídeos 360º</a></li>
+		  				<li class="navigation-list__item"><a href="{{ "#usando" | prepend: page.baseurl }}" class="navigation-list__anchor">Usando o player</a></li>
+		  				<li class="navigation-list__item"><a href="{{ "#creditos" | prepend: page.baseurl }}" class="navigation-list__anchor">Créditos</a></li>
+					</ul>
+		  		</nav>
+	  		</div>
+  		</div>
+  	</div>
+  </header>
+  <!-- END HEADER -->

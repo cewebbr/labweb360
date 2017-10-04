@@ -1,0 +1,24 @@
+<!-- PLAYER -->
+<div id="player" class="player-container jarallax"></div>
+{% if page.url == '/' %}
+	<script>
+	var player = new Clappr.Player({
+		source: "{{ "videos/teste.mp4" | prepend: page.baseurl }}",
+		poster: "{{ "img/galeria/tanque.jpg" | prepend: page.baseurl }}",
+		parentId: "#player",
+	  	width: '100%',
+	  	height: '100%'
+	});
+	</script>
+{% else %}
+	<script>
+	var player = new Clappr.Player({
+		source: "{{ page.midia | prepend: page.baseurl }}",
+		parentId: "#player",
+	  	width: '100%',
+	  	height: '100%',
+	  	poster: "{{ page.thumb | prepend: page.baseurl }}"
+	});
+	</script>
+{% endif %}
+<!-- END PLAYER -->

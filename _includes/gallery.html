@@ -1,0 +1,23 @@
+<!-- GALLERY -->
+<section class="section-wrapper">
+	<div class="content">
+		<div class="u-center-elements">
+			<h2 id="galeria" class="title title--color-3">Galeria 360º</h2>
+		</div>
+		<ul class="content--list">
+		    {% for galeria in site.galeria limit:9 %}
+				<li class="gallery__item col-4-12">
+					<a href="{{ galeria.url | remove_first:'/' }}">
+						<div class="media-object u-margin-1 media-object--play">
+							<img src="{{ galeria.thumb | prepend: page.baseurl }}" alt="" />
+						</div>
+						<h3 class="title title--size-3 title--type-2 title--color-3">{{ galeria.title }}</h3>
+						<span class="gallery__description">{{ galeria.time }}</span>
+					</a>
+				</li>
+		    {% endfor %}
+		</ul>
+		{% include gallery-list-anchor.html %}
+	</div>
+</section>
+<!-- END GALLERY -->

@@ -1,0 +1,17 @@
+# Site settings
+title: LabWeb360
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Site sds.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+exclude : ['css', '_sass', 'feed.xml', 'node_modules', ' _build-config.yml', 'gulpfile.js', 'Gruntfile.js', '.DS_Store', 'package.json']
+keep_files : ['css', 'js', 'img', 'sass', 'videos']
+env : dev
+collections :
+  galeria:
+    output: true
+    permalink: /:collection/:path/
+
