@@ -1,0 +1,60 @@
+///*------------------------------------*\
+//    #VARIABLES
+//\*------------------------------------*/
+
+/* SPACING WIDTH
+========================================================================== */
+$space-unity: 8px;
+
+/* GRID CONTENT WIDTH
+========================================================================== */
+$content-size--mobile: 47.9375rem; //767px
+$content-size--tablet: 48rem; //768px
+$content-size--desktop: 61.25rem; //980px
+$content-size--desktop-large: 74.25rem; //1188px
+
+/* GRID COLUMN WIDTH
+========================================================================== */
+$grid-column--mobile: 100%;
+$grid-column--tablet: 2.625rem; //42px
+$grid-column--desktop: 3.75rem; //60px
+$grid-column--desktop-large: 4.5625rem; //73px
+
+/* GRID GUTTER SPACE
+========================================================================== */
+$grid-gutter--mobile: 0.625rem; //10px
+$grid-gutter--tablet: 1.25rem; //20px
+$grid-gutter--desktop: 1.25rem; //20px
+$grid-gutter--desktop-large: 1.5rem; //24px
+
+/* CUSTOM BREAKPOINTS
+========================================================================== */
+$breakpoints: (
+  'only-mobile' : ( max-width: $content-size--mobile ),
+  'mobile': ( max-width: $content-size--tablet ),
+  'tablet-and-up': (min-width: $content-size--mobile),
+  'only-tablet': (max-width: $content-size--desktop),
+  'desktop-and-up': (min-width: $content-size--desktop),
+  'except-desktop' : ( max-width: $content-size--desktop),
+  'desktop-large' : ( min-width: $content-size--desktop-large)
+);
+
+$mq-breakpoints: (
+    mobile:  767px,
+    tablet:  768px,
+    desktop: 980px,
+    wide:    1188px
+);
+
+/* Z-INDEX
+========================================================================== */
+$z-index-underground: -1;
+$z-index-ground: 1;
+$z-index-jump: 10;
+$z-index-above: 100;
+$z-index-sky: 1000;
+$z-index-moon: 10000;
+
+/* TRANSITIONS
+========================================================================== */
+$basic-transition: .3s;

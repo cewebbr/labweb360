@@ -1,0 +1,262 @@
+///*------------------------------------*\
+//    #NAVIGATION
+//\*------------------------------------*/
+
+/* VARIABLES
+========================================================================== */
+$navigation-border-margin: 0;
+$navigation-item-color: $color-white;
+$navigation-hamburger-stick-width: 14px;
+$navigation-hamburger-stick-height: 2px;
+
+/* WRAPPER
+========================================================================== */
+.header__navigation-wrapper {
+	position: absolute; top: 0; left: 0;
+	width: 100%;
+	@include rem(padding, 0 spaces(1));
+	@include rem(height, spaces(6));
+	background-color: $color-black;
+
+	@include mq($from: desktop) {
+		position: static;
+		@include rem(margin-top, spaces(4));
+	}
+
+	&:before {
+		content: '';
+		position: absolute; right: 0; left: 0;
+		background-color: red;
+	}
+
+}
+
+/* CONTAINER
+========================================================================== */
+.navigation {
+
+	@include mq($from: desktop) {
+		margin-left: auto;
+	}
+
+	.is-open & {
+		position: fixed; top: 0; left: 0;
+		z-index: $z-index-sky;
+		display: flex; flex-direction: column; justify-content: center;
+		width: 100%; height: 100vh;
+		background-color: $color-gray-cod;
+		opacity: 0;
+		animation: openNavigationModal $basic-transition ease 1 normal forwards;
+	}
+
+}
+
+//When the modal is oppened, stop the page scroll.
+.body.navigation-is-open {
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* NAVIGATION LIST
+========================================================================== */
+.navigation-list {
+	display: none;
+
+	@include mq($from: desktop) {
+		display: inline-block;
+	}
+
+	.is-open & {
+		display: block;
+	}
+
+}
+
+.navigation-list__item, .menu-item {
+	display: inline-block;
+	vertical-align: middle;
+	@include rem(margin-right, spaces(2));
+
+	a {
+		position: relative;
+		@include rem(font-size, 14px); color: $color-white;
+
+		&:after {
+			content: '';
+			display: block; position: absolute;
+			width: 100%; height: 2px;
+			background-color: $color-white;
+			opacity: 0;
+			transform: translateY(0);
+			transition: opacity ease $basic-transition, transform ease $basic-transition;
+		}
+
+		&:hover, &:focus {
+			opacity: .7;
+
+			&:after {
+				opacity: 1;
+				transform: translateY(-25px);
+			}
+
+		}
+
+	}
+
+	.is-open & {
+		display: block;
+		margin-left: 0; @include rem(margin-bottom, 25px);
+	 	text-align: center;
+		animation: animateNavigationItems $basic-transition ease 1 normal forwards;
+
+		a {
+			color: $color-white; @include rem(font-size, 18px);
+
+			&:hover, &:focus {
+				position: static;
+
+				&:after {
+					content: none;
+				}
+
+			}
+
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
+.anchor-button--nav {
+
+	a {
+		position: static;
+		display: inline-flex; align-items: center;
+		vertical-align: top;
+		@include rem(margin-left, spaces(3)); @include rem(padding, 0 spaces(2));
+		@include rem(height, 30px);
+		@include rem(font-size, 13px); line-height: 100%; color: $color-black; text-decoration: none;
+		border: 1px solid $color-black;
+		border-radius: 7px;
+		background-color: $color-black;
+		cursor: pointer;
+		transition: background-color ease $basic-transition, color ease $basic-transition;
+
+		@include mq($from: desktop) {
+			margin-left: 0;
+		}
+
+		&:hover, &:focus {
+			position: static;
+			opacity: 1;
+			color: $color-black;
+			background-color: $color-white;
+			transition: background-color ease $basic-transition, color ease $basic-transition;
+		}
+
+		&:after, &:before {
+			content: none;
+		}
+
+	}
+
+}
+
+.header__navigation-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+
+/* MENU BUTTON
+========================================================================== */
+.navigation-toogler {
+	display: block;
+	margin-left: auto;
+	border: none;
+	background-color: transparent;
+	transition: opacity ease .4s;
+	cursor: pointer;
+
+	&:hover, &:focus { opacity:.6; }
+
+	@include mq($from: desktop) {
+		display: none;
+	}
+
+	.is-open & {
+		position: fixed; @include rem(top, spaces(4)); right: 50%;
+		z-index: $z-index-moon;
+		@include rem(padding, 0 0 0 spaces(1));
+		@include rem(width, 100px); @include rem(height, 40px);
+		background-color: $color-black;
+		border-radius: 6px;
+		transform: translateX(50%);
+	}
+
+}
+
+.navigation-toogler__burguer {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	@include rem(margin-left, 3px);
+	width: $navigation-hamburger-stick-width; height: $navigation-hamburger-stick-height;
+	background-color: $navigation-item-color;
+	border-radius: 6px;
+	transition: all ease .4s;
+
+	&:before, &:after {
+		content:'';
+		position: absolute; left: 0;
+		width: $navigation-hamburger-stick-width; height: $navigation-hamburger-stick-height;
+		background-color: $navigation-item-color;
+		border-radius: 6px;
+		transition: all ease .4s;
+	}
+
+	&:before { top: 5px; }
+
+	&:after { bottom: 5px; }
+
+	.is-open & {
+		top: -4px;
+		background-color: transparent;
+		&:before { top: 4px; transform: rotate(135deg); }
+		&:after { top: 4px; transform: rotate(-135deg); }
+	}
+
+}
+
+.navigation-toogler__text {
+	position: relative; top: 1px;
+	display: inline-block;
+	@include rem(margin-right, 5px);
+	font-family: $font-secondary; @include rem(font-size, 16px); font-weight: 600; line-height: 120%; color: $navigation-item-color;
+}
+
+/* ANIMATIONS
+========================================================================== */
+// OPEN NAVIGATION MODAL ANIMATION
+@keyframes openNavigationModal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// ANIMATE THE MODAL ITEMS INSIDE THE MOBILE NAVIGATION
+@keyframes animateNavigationItems {
+	from {
+		transform:translateY(150%);
+	}
+	to {
+		transform:translateY(0);
+	}
+}

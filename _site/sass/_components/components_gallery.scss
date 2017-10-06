@@ -1,0 +1,19 @@
+///*------------------------------------*\
+//    #GALLERY
+//\*------------------------------------*/
+
+/* ITEM
+========================================================================== */
+.gallery__item {
+	@include rem(margin-bottom, spaces(4.5));
+}
+
+/* TEXT
+========================================================================== */
+.gallery__description {
+	font-family: $font-secondary; @include rem(font-size, 11px); color: $color-gray-dove;
+}
+
+.separator {
+	@include rem(margin, spaces(10) 0 spaces(-13));
+}

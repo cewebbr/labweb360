@@ -1,0 +1,76 @@
+///*------------------------------------*\
+//    #HEADINGS
+//\*------------------------------------*/
+
+/* RESETS
+========================================================================== */
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
+/* VARIABLES
+========================================================================== */
+
+
+/* TITLES
+========================================================================== */
+.title {
+	position: relative;
+	display: inline-block;
+	@include rem(margin-bottom, spaces(5));
+	font-family: $font-secondary; @include rem(font-size, 30px); line-height: 100%; font-weight: 600; color: $color-white;
+
+}
+
+.title--size-2 {
+	@include rem(font-size, 30px);
+
+	@include mq($from: tablet) {
+		@include rem(font-size, 40px);
+	}
+
+	&:before {
+		content: '//';
+		position: absolute; left: -30px; top: 5px;
+		font-size: 24px;
+	}
+
+}
+
+.title--size-3 {
+	@include rem(margin-bottom, spaces(1)); @include rem(padding-left, spaces(2.5));
+	@include rem(font-size, 20px);
+
+	&:before {
+		content: '//';
+		position: absolute; left: 0; top: 2px;
+		font-size: 14px;
+	}
+
+}
+
+.title--size-4 {
+	@include rem(font-size, 14px);
+}
+
+/* COLOR
+========================================================================== */
+.title--color-2 {
+	color: $color-purple-flower;
+}
+
+.title--color-3 {
+	color: $color-gray-mine-shaft;
+}
+
+.title--color-4 {
+	color: $color-gray-cod;
+}
+
+/* TYPE
+========================================================================== */
+.title--type-2 {
+	position: static;
+	padding: 0;
+	font-family: $font-primary; font-weight: normal; line-height: 130%;
+}

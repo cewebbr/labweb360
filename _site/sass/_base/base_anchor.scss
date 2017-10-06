@@ -1,0 +1,30 @@
+///*------------------------------------*\
+//    #ANCHORS
+//\*------------------------------------*/
+
+/* VARIABLES
+========================================================================== */
+
+/* CUSTOM RESET
+========================================================================== */
+a {
+	display: inline-block;
+	color: inherit; text-decoration: none;
+	transition: opacity ease $basic-transition;
+	text-decoration-skip: ink;
+
+	&:focus, &:hover {
+		opacity: .7;
+		transition: opacity ease $basic-transition;
+	}
+
+}
+
+/* ANCHOR BUTTON
+========================================================================== */
+.anchor-button {
+	@include rem(padding, spaces(1.5) spaces(3));
+	border: 1px solid $color-gray-cod;
+	border-radius: 10px;
+	font-family: $font-secondary; @include rem(font-size, 16px); color: $color-gray-cod; font-weight: 600;
+}

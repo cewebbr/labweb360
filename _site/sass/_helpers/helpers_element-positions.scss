@@ -1,0 +1,45 @@
+///*------------------------------------*\
+//    #ELEMENT POSITIONS
+//\*------------------------------------*/
+
+/* CONTAINERS
+========================================================================== */
+.u-center-elements { text-align: center; }
+
+.u-center-elements--mobile {
+	text-align: center;
+
+	@include mq($from: tablet) {
+		text-align: left;
+	}
+
+}
+
+//Center floated columns
+.u-center-col {
+    display: table;
+    margin: 0 auto;
+}
+
+//Center floated columns and content
+.u-center-all {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ELEMENTS
+========================================================================== */
+.u-first { margin-left: 0 !important; }
+
+//Resets margin-right of the element
+.u-last { margin-right: 0 !important; }
+
+//Resets margin-bottom of the element
+.u-bottom { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+
+//Resets margin-top of the element
+.u-top { margin-top: 0 !important; }
+
+//Float the container to the oposite way in the markup
+.u-flow-opposite { float: right; }

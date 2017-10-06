@@ -1,0 +1,131 @@
+///*------------------------------------*\
+//    #WRAPPERS
+//\*------------------------------------*/
+
+/* VARIABLES
+========================================================================== */
+
+/* WRAPPER
+========================================================================== */
+.full-wrapper {
+	overflow: hidden;
+}
+
+/* SECTIONS
+========================================================================== */
+.section {
+	width: 100%;
+    // clear at the end of container
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+}
+
+/* ROWS
+========================================================================== */
+.row {
+
+    // clear at the end of container
+    clear: both;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+}
+
+/* CONTENT
+========================================================================== */
+.content {
+	@include rem(padding, 0 $grid-gutter--mobile);
+	max-width: 100%;
+
+    @include mq($from: tablet) {
+    	margin: auto;
+    	@include rem(padding, 0 $grid-gutter--tablet);
+        // max-width: $content-size--tablet;
+    	width: $content-size--tablet;
+    }
+
+	@include mq($from: desktop) {
+		@include rem(padding, 0 $grid-gutter--desktop);
+        // max-width: $content-size--desktop;
+		width: $content-size--desktop;
+	}
+
+    @include mq($from: wide) {
+        @include rem(padding, 0 $grid-gutter--desktop-large);
+        // max-width: $content-size--desktop-large;
+        width: $content-size--desktop-large;
+    }
+
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+}
+
+//When you need a wrapper for an unknow number of elements
+.content--list {
+    float: left;
+
+    @include mq($from: tablet) {
+        margin-right: -$grid-gutter--tablet;
+    }
+
+    @include mq($from: desktop) {
+        margin-right: -$grid-gutter--desktop;
+    }
+
+    @include mq($from: wide) {
+        margin-right: -$grid-gutter--desktop-large;
+    }
+
+}
+
+/* SECTION WRAPPERS
+========================================================================== */
+.section-wrapper {
+	@include rem(padding, spaces(8) 0 spaces(6));
+	background-color: $color-gray-gallery;
+
+    @include mq($from: desktop) {
+        @include rem(padding, spaces(9) 0 spaces(14));
+    }
+
+}
+
+/* TYPE VARIATIONS
+========================================================================== */
+.section-wrapper--type-2 {
+    border-bottom: 8px solid $color-gray-cod;
+}
+
+/* COLOR VARIATIONS
+========================================================================== */
+.section-wrapper--color-2 {
+    background-color: $color-purple-flower;
+}
+
+.section-wrapper--color-3 {
+    background-color: $color-pink-amaranth;
+}
+
+.section-wrapper--color-4 {
+    background-color: $color-gray-cod;
+}

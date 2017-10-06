@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LabWeb Style Guide</title>
+	<link href="https://fonts.googleapis.com/css?family=Lora%7CPoppins:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="../css/main.css">
+	<style>
+		.st-container {
+			display: block;
+			margin-bottom: 60px
+		}
+
+		.st-header {
+			margin-bottom: 30px; padding-bottom: 10px;
+			font-size: 25px; font-weight: 600;
+			border-bottom: 2px solid #000;
+		}
+
+		.st-header--subtitle {
+			margin-bottom: 15px;
+			font-size: 25px; font-weight: normal;
+			border: none;
+		}
+
+		.swatches {
+			display: inline-flex; align-content: center; align-items: center; text-align: center;
+			margin: 0 10px 20px 0;
+			vertical-align: top;
+			width: 100px; height: 100px;
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content" style="margin-top:80px; margin-bottom:80px;">
+		<div class="center-elements" style="margin-bottom: 60px;">
+			<h1>Style Guide</h1>
+		</div>
+		<div class="st-container">
+			<h2 class="st-header">TEXT:</h2>
+			<div class="row u-margin-6">
+				<div class="row u-margin-6">
+					<div class="col-4-12">
+						<h3 class="st-header st-header--subtitle">.title</h3>
+						<div style="background-color: black;">
+							<h1 class="title">Nome do título</h1>
+						</div>
+					</div>
+					<div class="col-3-12">
+						<h3 class="st-header st-header--subtitle">.title--type-2</h3>
+						<h1 class="title title--type-2">Nome do título 2</h1>
+					</div>
+				</div>
+				<div class="col-7-12 u-margin-3 row">
+					<h3 class="st-header st-header--subtitle">.title--type-3</h3>
+					<h1 class="title title--type-3">Sobre o projeto Lorem ipsum dolor sit amet</h1>
+				</div>
+				<div class="col-5-12 row">
+					<h3 class="st-header st-header--subtitle">.subtitle</h3>
+					<h3 class="subtitle">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</h3>
+				</div>
+			</div>
+			<div class="row u-margin-4 col-5-12">
+				<h3 class="st-header st-header--subtitle">.paragraph</h3>
+				<p class="paragraph">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum justo at ligula porttitor interdum. Phasellus eu pellentesque dui, nec placerat nisi. Pellentesque ac condimentum lacus, ut dictum nunc. Ut non nisl sem.
+				</p>
+				<p class="paragraph">
+					Curabitur congue tempor nisl, eu dapibus felis pharetra vitae. Phasellus leo nisl, lacinia sit amet odio sit amet, porttitor suscipit nulla. Donec consequat scelerisque libero, a sodales turpis posuere et.
+				</p>
+			</div>
+			<div class="row">
+				<h3 class="st-header st-header--subtitle">.description</h3>
+				<div class="description">A base de dados é o compilado de comentários a respeito de um anteprojeto de lei</div>
+				<div class="description description--size-2">A base de dados é o compilado de comentários a respeito de um anteprojeto de lei</div>
+			</div>
+		</div>
+		<div class="st-container">
+			<h2 class="st-header">BUTTONS:</h2>
+			<div class="row u-margin-4">
+				<div class="col-3-12">
+					<h3 class="st-header st-header--subtitle">.anchor-button</h3>
+					<button class="anchor-button">
+						<div class="anchor-button__wrapper">
+							<span class="anchor-button__text">Criar novo filtro</span>
+						</div>
+					</button>
+				</div>
+				<div class="col-4-12">
+					<h3 class="st-header st-header--subtitle">.anchor-button--color-2</h3>
+					<button class="anchor-button anchor-button--color-2">
+						<div class="anchor-button__wrapper">
+							<span class="anchor-button__text">Criar novo filtro</span>
+						</div>
+					</button>
+				</div>
+				<div class="col-4-12">
+					<h3 class="st-header st-header--subtitle">.anchor-button--color-3</h3>
+					<button class="anchor-button anchor-button--color-3">
+						<div class="anchor-button__wrapper">
+							<span class="anchor-button__text">Criar novo filtro</span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="st-container row">
+			<h2 class="st-header">Menu:</h2>
+			<div class="menu-wrapper">
+				<div class="u-center-elements">
+					<img class="menu__logo" src="../img/logo/logo.jpg" alt="" />
+				</div>
+				<ul class="menu-list">
+					<li class="menu-list__item">
+						<a href="#" class="menu-list__anchor"><img class="menu-list__icon" src="../img/icons/icon-home.svg" alt=""><span class="menu-list__icon-text">Home</span></a>
+					</li>
+					<li class="menu-list__item is-selected">
+						<a href="#" class="menu-list__anchor"><img class="menu-list__icon" src="../img/icons/icon-database.svg" alt=""><span class="menu-list__icon-text">Base de dados</span></a>
+					</li>
+					<li class="menu-list__item">
+						<a href="#" class="menu-list__anchor"><img class="menu-list__icon" src="../img/icons/icon-filter.svg" alt=""><span class="menu-list__icon-text">Resultado dos filtros</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

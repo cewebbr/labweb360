@@ -1,0 +1,119 @@
+/*------------------------------------*\
+    #PROJECT NAME
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Colors.................Colors the project will use
+ * Fonts..................Fonts used in the projects.
+ * Variables..............Global project variables.
+ * Spacing................General Spacing configurations.
+ *
+ * TOOLS
+ * REM....................PX to REM mixin.
+ * Breakpoint.............Breakpoint mixin.
+ * Placeholder............Placeholder style mixin.
+ * Spacer.................Spacing function.
+ * MQ.....................Media Query function.
+ *
+ * GENERIC
+ * Box-sizing.............Puts border-box in every DOM element.
+ * Normalize.css..........A level playing field.
+ * Grid...................Our grid measures.
+ *
+ * BASE
+ * Page...................Page-level styles (HTML element).
+ * Headings...............Heading styles
+ * Paragraphs.............Paragraphs styles
+ * List...................List styles
+ * Anchor.................Hyperlink styles
+ *
+ * OBJECTS
+ * Media..................Media for thumbs and videos.
+ * Wrappers...............Wrappers and page constraints.
+ *
+ * COMPONENTS
+ * Skip-Links.............Accessible skip to content links.
+ * Header.................Header.
+ *
+ * LAYOUT
+ *
+ * HELPERS
+ * Show/hide..............Helpers to show and side stuff.
+ * Elements-Positions.....Position and clear elements and columns.
+ * Spacing................General Page Spacing
+ * Text...................Text General Settings
+ * Swatches...............Custom swatches colors
+
+ * PLUGINS
+ * HighlightJS............Highligh JS Styles
+ */
+
+/**
+ * #SETTINGS
+ */
+@import "_settings/settings_colors.scss";
+@import "_settings/settings_fonts.scss";
+@import "_settings/settings_variables.scss";
+@import "_settings/settings_spacing.scss";
+
+/**
+ * #TOOLS
+ */
+@import "_tools/tools_rem.scss";
+@import "_tools/tools_placeholder.scss";
+@import "_tools/tools_spacer.scss";
+@import "_tools/tools_mq.scss";
+
+/**
+ * #GENERIC
+ */
+@import "_generic/generic_box-sizing.scss";
+@import "_generic/generic_normalize.scss";
+@import "_generic/generic_grid.scss";
+
+/**
+ * #BASE
+ */
+@import "_base/base_page.scss";
+@import "_base/base_headings.scss";
+@import "_base/base_paragraphs.scss";
+@import "_base/base_list.scss";
+@import "_base/base_anchor.scss";
+
+/**
+ * #OBJECTS
+ */
+@import "_objects/objects_media.scss";
+@import "_objects/objects_wrappers.scss";
+
+/**
+ * #COMPONENTS
+ */
+ @import "_components/components_skip-links.scss";
+ @import "_components/components_navigation.scss";
+ @import "_components/components_header.scss";
+ @import "_components/components_about.scss";
+ @import "_components/components_sponsors-list.scss";
+ @import "_components/components_gallery.scss";
+
+/**
+ * #LAYOUTS
+ */
+ // @import "_layout/layout_home.scss";
+
+/**
+ * #HELPERS
+ */
+@import "_helpers/helpers_hide-show.scss";
+@import "_helpers/helpers_element-positions.scss";
+@import "_helpers/helpers_spacing.scss";
+@import "_helpers/helpers_text.scss";
+@import "_helpers/helpers_swatches.scss";
+
+/**
+ * #PLUGINS
+*/
+@import "_plugins/plugins_highlightjs.scss";

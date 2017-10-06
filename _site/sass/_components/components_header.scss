@@ -1,0 +1,48 @@
+///*------------------------------------*\
+//    #HEADER
+//\*------------------------------------*/
+.header-wrapper {
+	background-color: $color-gray-cod;
+}
+
+.header-content {
+	display: flex; justify-content: center; align-items: center;
+	@include rem(height, 80px);
+
+	@include mq($from: desktop) {
+		@include rem(height, 120px);
+	}
+
+}
+
+.header-logo {
+	display: inline-block;
+	margin-right: auto;
+	width: 140px;
+
+	@include mq($from: tablet) {
+		width: auto; height: auto;
+	}
+
+}
+
+
+/* NAVIGATION
+========================================================================== */
+.navigation {
+	float: right;
+}
+
+.navigation-list {
+
+}
+
+.navigation-list__item {
+ 	display:inline-block;
+ 	@include rem(margin-right, spaces(2));
+}
+
+.navigation-list__anchor {
+
+	font-family: $font-secondary; @include rem(font-size, 13px); line-height: 120%; font-weight: 600; color: $color-white;
+}

@@ -1,0 +1,53 @@
+///*------------------------------------*\
+//    #HIDE & SHOW
+//\*------------------------------------*/
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+@mixin visuallyhidden() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.u-visuallyhidden {
+	@include visuallyhidden();
+}
+
+@include mq($until: desktop) {
+    .u-visuallyhidden--small {
+		@include visuallyhidden();
+    }
+}
+
+@include mq($from: desktop) {
+    .u-visuallyhidden--desktop {
+		@include visuallyhidden();
+    }
+}
+
+/* VISIBILITY
+========================================================================== */
+.u-hide {
+    display: none;
+}
+
+.u-hide--mobile {
+    @include mq($until: desktop) {
+        display: none !important;
+    }
+}
+
+.u-hide--desktop {
+    display: block;
+    @include mq($from: desktop) {
+        display: none !important;
+    }
+}

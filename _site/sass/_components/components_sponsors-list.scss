@@ -1,0 +1,23 @@
+///*------------------------------------*\
+//    #SPONSORS
+//\*------------------------------------*/
+
+.sponsors-list {
+	display: flex; align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include mq($from: desktop) {
+		flex-direction: initial;
+	}
+
+}
+
+.sponsors-list__item {
+	@include rem(margin-bottom, spaces(2));
+
+	@include mq($from: desktop) {
+		margin-bottom: 0;
+	}
+
+}
