@@ -17,6 +17,7 @@
     "gulp-shell": "^0.4.3"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.0",

@@ -8,7 +8,7 @@
 			<ul class="content--list">
 			    {% for galeria in site.galeria %}
 					<li class="gallery__item col-4-12">
-						<a href="{{ galeria.url | remove_first:'/' }}">
+						<a href="{{ galeria.url }}">
 							<div class="media-object u-margin-1 media-object--play">
 								<img src="{{ galeria.thumb | prepend: page.baseurl }}" alt="" />
 							</div>
