@@ -83,6 +83,8 @@
 //When you need a wrapper for an unknow number of elements
 .content--list {
     float: left;
+    display: flex;
+    flex-wrap: wrap;
 
     @include mq($from: tablet) {
         margin-right: -$grid-gutter--tablet;
