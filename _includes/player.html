@@ -8,18 +8,19 @@
 		//poster: "{{ "img/galeria/tanque.jpg" | prepend: page.baseurl }}",
 		plugins: [DashShakaPlayback, Video360],
 		parentId: "#player",
-	  	width: 810,
-	  	height: 600
+	  	width: $('#player').width(),
+	  	height: $('#player').height()
 	});
 	player.getPlugin('click_to_pause').disable();
+
 	</script>
 {% else %}
 	<script>
 	var player = new Clappr.Player({
 		source: "{{ page.midia | prepend: page.baseurl }}",
 		parentId: "#player",
-	  	width: '100%',
-	  	height: '100%',
+	  	width: $('#player').width(),
+	  	height: $('#player').height(),
 	  	poster: "{{ page.thumb | prepend: page.baseurl }}"
 	});
 	player.getPlugin('click_to_pause').disable();
