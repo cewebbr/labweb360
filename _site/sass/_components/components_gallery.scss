@@ -17,3 +17,8 @@
 .separator {
 	@include rem(margin, spaces(10) 0 spaces(-13));
 }
+
+.best-practice {
+	background: white;
+	text-align: center;
+}

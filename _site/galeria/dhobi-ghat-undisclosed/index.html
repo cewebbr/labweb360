@@ -8,14 +8,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noindex, nofollow">
 
-	<title>Galerias</title>
-	<meta name="description" content="Site sds.
-">
+	<title>Dhobi Ghat Undisclosed</title>
+	<meta name="description" content="Dhobi Ghat é um dos poucos lugares do mundo em que os sentimentos e emoções emergem em um ritmo tão complexo que merece ser mostrado para todos. Dhobi Ghat é...">
 
 	<link href="https://fonts.googleapis.com/css?family=Lora%7CPoppins:400,600,700" rel="stylesheet">
 
-	<link rel="stylesheet" href="../css/main.css">
-	<link rel="canonical" href="/galeria/">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="canonical" href="/galeria/dhobi-ghat-undisclosed/">
 	<link rel="alternate" type="application/rss+xml" title="LabWeb360" href="/feed.xml">
 	<script type="text/javascript" charset="utf-8" src="/js/plugins/clappr.js"> </script>
 	<script type="text/javascript" charset="utf-8" src="/js/plugins/clappr-video360.min.js"> </script>
@@ -30,7 +29,7 @@
   	<div class="content">
   		<div class="header-content">
 	  		
-				<a href="../" class="header-logo"><img src="../img/logos/logo.svg" alt="LabWeb 360"></a>
+				<a href="../../" class="header-logo"><img src="../../img/logos/logo.svg" alt="LabWeb 360"></a>
 	  		
 			<div id="js-navigation-wrapper" class="navigation-wrapper flow-opposite">
 				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">
@@ -38,10 +37,10 @@
 				</button>
 		  		<nav id="js-navigation" class="navigation" role="navigation">
 		  			<ul class="navigation-list" id="js-navigation-list">
-		  				<li class="navigation-list__item"><a href="../#melhores-praticas" class="navigation-list__anchor">Melhores práticas</a></li>
-		  				<li class="navigation-list__item"><a href="../#galeria" class="navigation-list__anchor">Galeria de vídeos 360º</a></li>
-		  				<li class="navigation-list__item"><a href="../#usando" class="navigation-list__anchor">Usando o player</a></li>
-		  				<li class="navigation-list__item"><a href="../#creditos" class="navigation-list__anchor">Créditos</a></li>
+		  				<li class="navigation-list__item"><a href="../../#melhores-praticas" class="navigation-list__anchor">Melhores práticas</a></li>
+		  				<li class="navigation-list__item"><a href="../../#galeria" class="navigation-list__anchor">Galeria de vídeos 360º</a></li>
+		  				<li class="navigation-list__item"><a href="../../#usando" class="navigation-list__anchor">Usando o player</a></li>
+		  				<li class="navigation-list__item"><a href="../../#creditos" class="navigation-list__anchor">Créditos</a></li>
 					</ul>
 		  		</nav>
 	  		</div>
@@ -49,42 +48,45 @@
   	</div>
   </header>
   <!-- END HEADER -->
-    <!-- GALLERY-LIST -->
-<section class="section-wrapper">
+	<!-- PLAYER -->
+<div id="player" class="player-container jarallax"></div>
+
+	<script>
+	var player = new Clappr.Player({
+		source: "../../videos/india/dash/stream.mpd",
+		parentId: "#player",
+	  	width: $('#player').width(),
+	  	height: $('#player').height(),
+	  	poster: "../../img/galeria/dhobi-ghat.png"
+	});
+	player.getPlugin('click_to_pause').disable();
+	</script>
+
+<!-- END PLAYER -->
+
+    <!-- POST CONTENT -->
+<div class="section-wrapper">
 	<div class="content">
-		<div class="u-center-elements">
-			<h1 class="title title--color-3">Galeria de vídeos 360º</h1>
-		</div>
-		<div class="row">
-			<ul class="content--list">
-			    
-					<li class="gallery__item col-4-12">
-						<a href="/galeria/dhobi-ghat-undisclosed/">
-							<div class="media-object u-margin-1 media-object--play">
-								<img src="../img/galeria/dhobi-ghat.png" alt="" />
-							</div>
-							<h3 class="title title--size-3 title--type-2 title--color-3">Dhobi Ghat Undisclosed</h3>
-							<span class="gallery__description">4:22</span>
-						</a>
-					</li>
-			    
-					<li class="gallery__item col-4-12">
-						<a href="/galeria/the-best-lamem-in-town/">
-							<div class="media-object u-margin-1 media-object--play">
-								<img src="../img/galeria/dhobi-ghat.png" alt="" />
-							</div>
-							<h3 class="title title--size-3 title--type-2 title--color-3">The best lamem in town</h3>
-							<span class="gallery__description">4:22</span>
-						</a>
-					</li>
-			    
-			</ul>
+		<div class="u-center-col">
+			<div class="col-10-12">
+				<div class="u-center-elements">
+					<h1 class="title title--size-2 title--color-4">Dhobi Ghat Undisclosed</h1>
+				</div>
+				<div class="post-content u-margin-8">
+					<p>Dhobi Ghat é um dos poucos lugares do mundo em que os sentimentos e emoções emergem em um ritmo tão complexo que merece ser mostrado para todos. Dhobi Ghat é uma área murada, pobre, onde as pessoas vivem e trabalham em um compasso insano, lavando e secando para os hotéis, restaurantes e marcas mais luxuosas de Mumbai. Eles se esforçam para servir uma realidade que nunca será a deles. Eles não existem além do muro; dentro, eles sobrevivem. É assim que floresce um sentimento tão forte de comunidade dentro das fronteiras de Dhobi Ghat.</p>
+
+				</div>
+				<!-- ALL GALLERIES ANCHOR -->
+<div class="u-center-elements row">
+	<a href="../../galeria" class="anchor-button">Veja todos os vídeos</a>
+</div>
+<!-- END ALL GALLERIES ANCHOR -->
+			</div>
 		</div>
 		<hr class="separator">
 	</div>
-</section>
-<!-- END GALLERY-LIST -->
-
+</div>
+<!-- END POST CONTENT -->
     <!-- CREDITS -->
 <section class="section-wrapper section-wrapper--type-2">
 	<div class="content">
@@ -101,10 +103,10 @@
 				</p>
 				<h3 class="title title--size-4 title--color-3 u-bottom">// parceiros</h3>
 				<ul class="sponsors-list">
-					<li class="sponsors-list__item"><img src="../img/logos/logo-ceweb.svg" alt="ceweb.br" /></li>
-					<li class="sponsors-list__item"><img src="../img/logos/logo-nic-cgi.png" alt="nic.br e cgi.br" /></li>
-					<li class="sponsors-list__item"><img src="../img/logos/logo-puc.png" alt="puc-sp" /></li>
-					<li class="sponsors-list__item"><img src="../img/logos/logo-kmd.png" alt="the university of tokyo" /></li>
+					<li class="sponsors-list__item"><img src="../../img/logos/logo-ceweb.svg" alt="ceweb.br" /></li>
+					<li class="sponsors-list__item"><img src="../../img/logos/logo-nic-cgi.png" alt="nic.br e cgi.br" /></li>
+					<li class="sponsors-list__item"><img src="../../img/logos/logo-puc.png" alt="puc-sp" /></li>
+					<li class="sponsors-list__item"><img src="../../img/logos/logo-kmd.png" alt="the university of tokyo" /></li>
 				</ul>
 			</div>
 		</div>
@@ -112,7 +114,7 @@
 </section>
 
     <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../js/lib/require.js" data-main="../js/main"></script>
+    <script src="../../js/lib/require.js" data-main="../../js/main"></script>
 
 <!-- END CREDITS -->
 
