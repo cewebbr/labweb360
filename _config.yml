@@ -1,8 +1,8 @@
 # Site settings
-title: LabWeb360
-email: your-email@domain.com
+title: Labweb360
+email: ceweb@nic.br
 description: > # this means to ignore newlines until "baseurl:"
-  Site sds.
+  Projeto Labweb360 lançado pelo Centro de Estudos sobre Tecnologias Web (Ceweb.br) com foco em pesquisa e experimentação de tecnologias interativas de realidade virtual e vídeo 360º.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
