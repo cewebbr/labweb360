@@ -13,7 +13,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lora%7CPoppins:400,600,700" rel="stylesheet">
 
-	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../css/main.css">
 	<link rel="canonical" href="/galeria/the-best-lamem-in-town/">
 	<link rel="alternate" type="application/rss+xml" title="LabWeb360" href="/feed.xml">
 	<script type="text/javascript" charset="utf-8" src="/js/plugins/clappr.js"> </script>
@@ -29,7 +29,7 @@
   	<div class="content">
   		<div class="header-content">
 	  		
-				<a href="../../" class="header-logo"><img src="../../img/logos/logo.svg" alt="LabWeb 360"></a>
+				<a href="../" class="header-logo"><img src="../img/logos/logo.svg" alt="LabWeb 360"></a>
 	  		
 			<div id="js-navigation-wrapper" class="navigation-wrapper flow-opposite">
 				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">
@@ -37,10 +37,10 @@
 				</button>
 		  		<nav id="js-navigation" class="navigation" role="navigation">
 		  			<ul class="navigation-list" id="js-navigation-list">
-		  				<li class="navigation-list__item"><a href="../../#melhores-praticas" class="navigation-list__anchor">Melhores práticas</a></li>
-		  				<li class="navigation-list__item"><a href="../../#galeria" class="navigation-list__anchor">Galeria de vídeos 360º</a></li>
-						<!-- <li class="navigation-list__item"><a href="../../#usando" class="navigation-list__anchor">Usando o player</a></li> -->
-		  				<li class="navigation-list__item"><a href="../../#creditos" class="navigation-list__anchor">Créditos</a></li>
+		  				<li class="navigation-list__item"><a href="../#melhores-praticas" class="navigation-list__anchor">Melhores práticas</a></li>
+		  				<li class="navigation-list__item"><a href="../#galeria" class="navigation-list__anchor">Galeria de vídeos 360º</a></li>
+						<!-- <li class="navigation-list__item"><a href="../#usando" class="navigation-list__anchor">Usando o player</a></li> -->
+		  				<li class="navigation-list__item"><a href="../#creditos" class="navigation-list__anchor">Créditos</a></li>
 					</ul>
 		  		</nav>
 	  		</div>
@@ -54,11 +54,11 @@
 
 	<script>
 	var player = new Clappr.Player({
-		source: "../..//videos/japao/dash/stream.mpd",
+		source: "..//videos/japao/dash/stream.mpd",
+		plugins: [DashShakaPlayback, Video360],
 		parentId: "#player",
 	  	width: $('#player').width(),
-	  	height: $('#player').height(),
-	  	poster: "../..//img/galeria/dhobi-ghat.png"
+	  	height: $('#player').height()
 	});
 	player.getPlugin('click_to_pause').disable();
 	</script>
@@ -79,7 +79,7 @@
 				</div>
 				<!-- ALL GALLERIES ANCHOR -->
 <div class="u-center-elements row">
-	<a href="../../galeria" class="anchor-button">Veja todos os vídeos</a>
+	<a href="../galeria" class="anchor-button">Veja todos os vídeos</a>
 </div>
 <!-- END ALL GALLERIES ANCHOR -->
 			</div>
@@ -104,10 +104,10 @@
 				</p>
 				<h3 class="title title--size-4 title--color-3 u-bottom">// parceiros</h3>
 				<ul class="sponsors-list">
-					<li class="sponsors-list__item"><img src="../../img/logos/logo-ceweb.svg" alt="ceweb.br" /></li>
-					<li class="sponsors-list__item"><img src="../../img/logos/logo-nic-cgi.png" alt="nic.br e cgi.br" /></li>
-					<li class="sponsors-list__item"><img src="../../img/logos/logo-puc.png" alt="puc-sp" /></li>
-					<li class="sponsors-list__item"><img src="../../img/logos/logo-kmd.png" alt="the university of tokyo" /></li>
+					<li class="sponsors-list__item"><img src="../img/logos/logo-ceweb.svg" alt="ceweb.br" /></li>
+					<li class="sponsors-list__item"><img src="../img/logos/logo-nic-cgi.png" alt="nic.br e cgi.br" /></li>
+					<li class="sponsors-list__item"><img src="../img/logos/logo-puc.png" alt="puc-sp" /></li>
+					<li class="sponsors-list__item"><img src="../img/logos/logo-kmd.png" alt="the university of tokyo" /></li>
 				</ul>
 			</div>
 		</div>
@@ -115,7 +115,7 @@
 </section>
 
     <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../../js/lib/require.js" data-main="../../js/main"></script>
+    <script src="../js/lib/require.js" data-main="../js/main"></script>
 
 <!-- END CREDITS -->
 

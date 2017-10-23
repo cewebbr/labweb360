@@ -55,10 +55,10 @@
 	<script>
 	var player = new Clappr.Player({
 		source: "../..//videos/india/dash/stream.mpd",
+		plugins: [DashShakaPlayback, Video360],
 		parentId: "#player",
 	  	width: $('#player').width(),
-	  	height: $('#player').height(),
-	  	poster: "../..//img/galeria/dhobi-ghat.png"
+	  	height: $('#player').height()
 	});
 	player.getPlugin('click_to_pause').disable();
 	</script>

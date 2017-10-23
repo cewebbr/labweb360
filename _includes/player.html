@@ -3,9 +3,7 @@
 {% if page.url == '/' %}
 	<script>
 	var player = new Clappr.Player({
-		//source: "{{ "/labweb360/videos/612881.mpd" | prepend: page.baseurl }}",
-		source: "{{ "./videos/india/dash/stream.mpd" | prepend: page.baseurl }}",
-		//poster: "{{ "img/galeria/tanque.jpg" | prepend: page.baseurl }}",
+		source: "{{ "/videos/india/dash/stream.mpd" | prepend: page.baseurl }}",
 		plugins: [DashShakaPlayback, Video360],
 		parentId: "#player",
 	  	width: $('#player').width(),
@@ -18,10 +16,10 @@
 	<script>
 	var player = new Clappr.Player({
 		source: "{{ page.midia | prepend: page.baseurl }}",
+		plugins: [DashShakaPlayback, Video360],
 		parentId: "#player",
 	  	width: $('#player').width(),
-	  	height: $('#player').height(),
-	  	poster: "{{ page.thumb | prepend: page.baseurl }}"
+	  	height: $('#player').height()
 	});
 	player.getPlugin('click_to_pause').disable();
 	</script>

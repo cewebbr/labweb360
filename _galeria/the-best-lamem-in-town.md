@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The best lamem in town
-baseurl: ../../
+baseurl: ../
 thumb: /img/galeria/dhobi-ghat.png
 midia: /videos/japao/dash/stream.mpd
 time: '4:22'
