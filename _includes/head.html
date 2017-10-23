@@ -12,8 +12,20 @@
 	<link rel="stylesheet" href="{{ "css/main.css" | prepend: page.baseurl }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
 	<script type="text/javascript" charset="utf-8" src="/js/plugins/clappr.js"> </script>
 	<script type="text/javascript" charset="utf-8" src="/js/plugins/clappr-video360.min.js"> </script>
 	<script type="text/javascript" charset="utf-8" src="/js/plugins/dash-shaka-playback.js"> </script>
 
+
+	<meta property="og:title" content=" {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"}>
+	<meta property="og:description" content=" {{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+{% if page.url == '/' %}
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="/img/galeria/og-labweb.png">
+{% else %}
+	<meta property="og:type" content="video.other">
+	<meta property="og:image" content="{{ galeria.thumb | prepend: page.baseurl }}" >
+{% endif %}
 </head>

@@ -10,7 +10,7 @@
 					<li class="gallery__item col-4-12">
 						<a href="{{ galeria.url }}">
 							<div class="media-object u-margin-1 media-object--play">
-								<img src="{{ galeria.thumb | prepend: page.baseurl }}" alt="" />
+								<img src="{{ galeria.thumb | prepend: page.baseurl }}" alt="{{ galeria.title }}" />
 							</div>
 							<h3 class="title title--size-3 title--type-2 title--color-3">{{ galeria.title }}</h3>
 							<span class="gallery__description">{{ galeria.time }}</span>
