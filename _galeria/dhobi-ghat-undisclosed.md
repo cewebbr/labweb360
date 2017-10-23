@@ -2,8 +2,8 @@
 layout: page
 title: Dhobi Ghat Undisclosed
 baseurl: ../../
-thumb: img/galeria/dhobi-ghat.png
-midia: videos/india/dash/stream.mpd
+thumb: /img/galeria/dhobi-ghat.png
+midia: /videos/india/dash/stream.mpd
 time: '4:22'
 
 ---
