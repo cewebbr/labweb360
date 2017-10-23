@@ -17,15 +17,16 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="canonical" href="/">
 	<link rel="alternate" type="application/rss+xml" title="LabWeb360" href="/feed.xml">
-
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/clappr/clappr@latest/dist/clappr.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/plugins/clappr.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/plugins/clappr-video360.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/plugins/dash-shaka-playback.js"> </script>
 
 </head>
 
 
   <body data-language="pt-br" id="js-body">
     <!-- HOME CONTENT -->
-	  <!-- HEADER -->
+      <!-- HEADER -->
   <header class="header-wrapper">
   	<div class="content">
   		<div class="header-content">
@@ -54,30 +55,36 @@
 
 	<script>
 	var player = new Clappr.Player({
-		source: "videos/teste.mp4",
-		poster: "img/galeria/tanque.jpg",
+		//source: "/labweb360/videos/612881.mpd",
+		source: "./videos/india/dash/stream.mpd",
+		//poster: "img/galeria/tanque.jpg",
+		plugins: [DashShakaPlayback, Video360],
 		parentId: "#player",
-	  	width: '100%',
-	  	height: '100%'
+	  	width: $('#player').width(),
+	  	height: $('#player').height()
 	});
+	player.getPlugin('click_to_pause').disable();
+
 	</script>
 
 <!-- END PLAYER -->
+
     <!-- ABOUT -->
 <section class="section-wrapper">
 	<div class="content">
 		<div class="u-center-elements">
-			<h2 class="title title--size-2 title--color-4">vídeo 360º: imersão e empatia</h2>
+			<h2 class="title title--size-2 title--color-4">dhobi ghat: imersão e empatia</h2>
 			<div class="column-paragraph">
-				<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis libero vitae diam facilisis, quis sodales sem elementum. Vivamus eget lorem ante. Morbi quis ligula finibus, lobortis diam id, eleifend metus. Quisque mollis purus et sem rhoncus rhoncus. Phasellus quis mi sit amet arcu ultricies mollis eget sed justo. Nullam eget nisi nisi. Ut auctor, tortor luctus scelerisque tincidunt, elit diam euismod neque, sed aliquam metus lectus eget augue. Aliquam ligula tellus, pulvinar vel massa a, laoreet condimentum massa. Sed non dolor egestas quam gravida suscipit nec ut eros.</p>
-				<p class="paragraph">Maecenas commodo nulla ac sodales rutrum. Vestibulum molestie non lacus ac aliquet. Donec suscipit nulla turpis, nec lacinia sapien viverra eu.</p>
-				<p class="paragraph">Maecenas congue, sem at mattis tincidunt, metus sem lobortis ante, nec malesuada nisi dolor id mi. Maecenas id lectus vitae odio condimentum vulputate. Praesent gravida, odio id mattis placerat, quam orci bibendum odio, sed convallis elit metus at turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur odio quis erat euismod pretium. Morbi eu eros tempus, ornare nisi vitae, maximus sapien.</p>
-				<p class="paragraph">Aenean sed tortor venenatis, ornare nulla vel, tincidunt ex. Cras blandit aliquet arcu sed tempor. Nam rhoncus condimentum nisi, eu malesuada tellus pretium.</p>
+				<p class="paragraph"><em>Dhobi Ghat</em> é um dos poucos lugares do mundo em que os sentimentos e emoções emergem em um ritmo tão complexo que merece ser mostrado para todos. <em>Dhobi Ghat</em> é uma área murada, pobre, onde as pessoas vivem e trabalham em um compasso insano, lavando e secando para os hotéis, restaurantes e marcas mais luxuosas de Mumbai. Eles se esforçam para servir uma realidade que nunca será a deles. Eles não existem além do muro; dentro, eles sobrevivem. É assim que floresce um sentimento tão forte de comunidade dentro das fronteiras de <em>Dhobi Ghat</em>.</p>
+				<p class="paragraph">A concepção do projeto <em>Dhobi Ghat Undisclosed</em> teve como objetivo retratar o cotidiano das famílias <em>dhobi</em>. O que desejávamos era construir uma experiência de imersão que despertasse o sentido de presença nas pessoas que nunca estiveram lá. Utilizamos a tecnologia de vídeo 360º para fazer a captura de imagem e as tecnologias Web para a sua publicação.</p>
+				<p class="paragraph">O roteiro do projeto foi desenvolvido com inspiração no modo de documentário observativo, proposto pelo teórico Bill Nichols. De acordo com o autor, esse tipo de documentário é aquele em que “olhamos para dentro da vida no momento em que ela é vivida. Os atores sociais interagem uns com os outros, ignorando os cineastas”, ou seja, busca capturar a realidade tal qual ela é — ou aquela que aparenta aos nossos sentidos. Para isso, devemos evitar qualquer manipulação e interferência no momento da captura dos vídeos, perseguindo a naturalidade da situação como se a câmera não estivesse presente.</p>
+				<p class="paragraph">Quando definimos o tema, sabíamos que esse conteúdo seria especial para as pessoas que nunca haviam colocado os pés naquele ambiente, que não conheciam nem de longe a realidade de uma casta inferior na Índia. A próxima etapa do projeto é investigar critérios de experiência do usuário nessas plataformas, coletando evidências sobre o que foi bom e o que não funcionou do jeito esperado, para que possamos, então, melhorar ainda mais os projetos de vídeo 360º e realidade virtual como a grande máquina de emoções e empatia.</p>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- END ABOUT -->
+
     <!-- BEST PRACTICES -->
 <section class="section-wrapper section-wrapper--color-4">
 	<div class="content">
@@ -86,45 +93,38 @@
 		</div>
 		<ul class="content--list">
 			<li class="col-6-12">
-				<a href="#">
-					<div class="media-object media-object--play">
-						<img src="img/examples/example-1.jpg" alt="" />
+					<div class="best-practice">
+						<img src="img/icons/bp1.png" alt="" />
 					</div>
-					<h3 class="title title--size-3">quebra da quarta parede</h3>
-					<p class="paragraph u-color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus augue orci, nec lacinia elit porttitor id. Nulla facilisi. Aenean feugiat diam sit amet eros auctor blandit. Curabitur vel ex faucibus, gravida sem ac, bibendum leo. Aenean laoreet tellus erat.</p>
-				</a>
+					<h3 class="title title--size-3">duração das cenas</h3>
+					<p class="paragraph u-color-white">Os vídeos 360 devem ter duração mais longas do que o formato tradicional. Deve-se evitar cenas curtas e jump cut. A audiência deverá ter um tempo adequado para explorar a cena para se envolver com a narrativa. Em nossas experiências optamos por uma montagem com cenas de 30 segundos de duração.</p>
 			</li>
 			<li class="col-6-12">
-				<a href="#">
-					<div class="media-object media-object--play">
-						<img src="img/examples/example-1.jpg" alt="" />
+					<div class="best-practice">
+						<img src="img/icons/bp2.png" alt="" />
 					</div>
-					<h3 class="title title--size-3">quebra da quarta parede</h3>
-					<p class="paragraph u-color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus augue orci, nec lacinia elit porttitor id. Nulla facilisi. Aenean feugiat diam sit amet eros auctor blandit. Curabitur vel ex faucibus, gravida sem ac, bibendum leo. Aenean laoreet tellus erat.</p>
-				</a>
+					<h3 class="title title--size-3">transição entre cenas</h3>
+					<p class="paragraph u-color-white">Os vídeos 360 devem proporcionar uma transição suave e fluida entre as cenas. Deve-se evitar o corte seco entre as cenas para que a audiência não sofra com vertigem e desorientação espacial. Em nossas experiências optamos por uma edição com fade in e fade ou na transição entre as cenas.</p>
 			</li>
 			<li class="col-6-12">
-				<a href="#">
-					<div class="media-object media-object--play">
-						<img src="img/examples/example-1.jpg" alt="" />
+					<div class="best-practice">
+						<img src="img/icons/bp3.png" alt="" />
 					</div>
-					<h3 class="title title--size-3">quebra da quarta parede</h3>
-					<p class="paragraph u-color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus augue orci, nec lacinia elit porttitor id. Nulla facilisi. Aenean feugiat diam sit amet eros auctor blandit. Curabitur vel ex faucibus, gravida sem ac, bibendum leo. Aenean laoreet tellus erat.</p>
-				</a>
+					<h3 class="title title--size-3">movimento da câmera</h3>
+					<p class="paragraph u-color-white">Ao capturar a imagem, deve-se evitar movimentos bruscos com a câmera. No caso de vídeo 360, principalmente se assistido por meio de equipamentos de realidade virtual, a audiência poderá sentir vertigem se a câmera se movimentar pela cena. Em nosso projeto, optamos por deixar a câmera fixa em um tripé capturando as imagens ao seu redor. Também pode-se utilizar um slider de baixa velocidade.</p>
 			</li>
 			<li class="col-6-12">
-				<a href="#">
-					<div class="media-object media-object--play">
-						<img src="img/examples/example-1.jpg" alt="" />
+					<div class="best-practice">
+						<img src="img/icons/bp4.png" alt="" />
 					</div>
-					<h3 class="title title--size-3">quebra da quarta parede</h3>
-					<p class="paragraph u-color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus augue orci, nec lacinia elit porttitor id. Nulla facilisi. Aenean feugiat diam sit amet eros auctor blandit. Curabitur vel ex faucibus, gravida sem ac, bibendum leo. Aenean laoreet tellus erat.</p>
-				</a>
+					<h3 class="title title--size-3">qualidade da imagem</h3>
+					<p class="paragraph u-color-white">A qualidade da imagem é um fator principal no quesito de imersão, mas também um dos desafios na transmissão de conteúdos na Web. Em nosso projeto, nós usamos uma imagem com uma resolução de 4k no momento da captura, o que traz uma qualidade mínima para um projeto que utilize video 360.</p>
 			</li>
 		</ul>
 	</div>
 </section>
 <!-- END BEST PRACTICES -->
+
     <!-- GALLERY -->
 <section class="section-wrapper">
 	<div class="content">
@@ -134,12 +134,22 @@
 		<ul class="content--list">
 		    
 				<li class="gallery__item col-4-12">
-					<a href="galeria/teste/">
+					<a href="galeria/dhobi-ghat-undisclosed/">
 						<div class="media-object u-margin-1 media-object--play">
-							<img src="img/galeria/tanque.jpg" alt="" />
+							<img src="img/galeria/dhobi-ghat.png" alt="" />
 						</div>
-						<h3 class="title title--size-3 title--type-2 title--color-3">Generating Green Energy in a Chilean Desert</h3>
-						<span class="gallery__description">11:30</span>
+						<h3 class="title title--size-3 title--type-2 title--color-3">Dhobi Ghat Undisclosed</h3>
+						<span class="gallery__description">4:22</span>
+					</a>
+				</li>
+		    
+				<li class="gallery__item col-4-12">
+					<a href="galeria/the-best-lamem-in-town/">
+						<div class="media-object u-margin-1 media-object--play">
+							<img src="img/galeria/dhobi-ghat.png" alt="" />
+						</div>
+						<h3 class="title title--size-3 title--type-2 title--color-3">The best lamem in town</h3>
+						<span class="gallery__description">4:22</span>
 					</a>
 				</li>
 		    
@@ -152,24 +162,6 @@
 	</div>
 </section>
 <!-- END GALLERY -->
-    <!-- CODE -->
-<section  class="section-wrapper section-wrapper--color-4">
-	<div class="content">
-		<div class="u-center-elements">
-			<h2 id="usando" class="title">Usando o player</h2>
-		</div>
-			<h3 class="title title--size-3">Adicione o seguinte código no seu HMTL:</h3>
-			<div class="highlight-js">
-				<pre><code class="html">&lt;head&gt;<br/>  &lt;script type=&#x201d;text/javascript&#x201d; src=&#x201d;https://cdn.jsdelivr.net/gh/clappr/clappr@latest/dist/clappr.min.js&#x201d;&gt;&lt;/script&gt;<br/>&lt;/head&gt;</code></pre>
-			</div>
-			<h3 class="title title--size-3">Agora, crie o player</h3>
-			<div class="highlight-js">
-				<pre><code>&lt;body&gt;<br/>  &lt;div id=&#x201d;player&#x201d;&gt;&lt;/div&gt;<br/>  &lt;script&gt;<br/>    var player = new Clappr.Player({source: &#x201c;http://your.video/here.mp4&#x201d;, parentId: &#x201c;#player&#x201d;});<br/>  &lt;/script&gt;<br/>&lt;/body&gt;</code></pre>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END CODE -->
     <!-- CREDITS -->
 <section class="section-wrapper section-wrapper--type-2">
 	<div class="content">
@@ -178,14 +170,18 @@
 				<div class="u-center-elements">
 					<h2 id="creditos" class="title title--color-3">Créditos &amp; Agradecimentos</h2>
 				</div>
-				<p class="paragraph u-margin-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis libero vitae diam facilisis, quis sodales sem elementum. Vivamus eget lorem ante. Morbi quis ligula finibus, lobortis diam id, eleifend metus. Quisque mollis purus et sem rhoncus rhoncus. Phasellus quis mi sit amet arcu ultricies mollis eget sed justo.</p>
+				<p class="paragraph">
+				Este projeto foi executado pelo Centro de Estudos sobre Tecnologias Web (<a href="http://ceweb.br/">Ceweb.br</a>) e apoiado pelo Núcleo de Informação e Coordenação do Ponto BR (<a href="http://nic.br/">NIC.br</a>) e pelo Comitê Gestor da Internet no Brasil (<a href="http://cgi.br/">CGI.br</a>).</p>
+				<p class="paragraph">
+				Agradecimentos à <a href="https://www.keio.ac.jp/">Keio University</a> por receber os pesquisadores Diogo Cortiz e <a href="https://newtoncalegari.com.br/">Newton Calegari</a> no laboratório da <a href="http://www.kmd.keio.ac.jp/">Keio Media Design</a>, em Tóquio, Japão; 
+					aos colaboradores dos projetos <a href="http://clappr.io/">Clappr</a> e <a href="https://github.com/thiagopnts/kaleidoscope">Kaleidoscope</a> por contribuírem com ferramentas open source para vídeos na Web; à <a href="http://pucsp.br/">PUC-SP</a> pelo apoio na execução da pesquisa e pelo fornecimento de equipamentos.
+				</p>
 				<h3 class="title title--size-4 title--color-3 u-bottom">// parceiros</h3>
 				<ul class="sponsors-list">
-					<li class="sponsors-list__item"><img src="img/logos/logo-ceweb.svg" alt="ceweb" /></li>
+					<li class="sponsors-list__item"><img src="img/logos/logo-ceweb.svg" alt="ceweb.br" /></li>
+					<li class="sponsors-list__item"><img src="img/logos/logo-nic-cgi.png" alt="nic.br e cgi.br" /></li>
 					<li class="sponsors-list__item"><img src="img/logos/logo-puc.png" alt="puc-sp" /></li>
-					<li class="sponsors-list__item"><img src="img/logos/logo-mumbai.png" alt="university of mumbai" /></li>
-					<li class="sponsors-list__item"><img src="img/logos/logo-tokyo.png" alt="the university of tokyo" /></li>
-					<li class="sponsors-list__item"><img src="img/logos/logo-samsung.png" alt="samsung" /></li>
+					<li class="sponsors-list__item"><img src="img/logos/logo-kmd.png" alt="the university of tokyo" /></li>
 				</ul>
 			</div>
 		</div>
@@ -196,7 +192,9 @@
     <script src="js/lib/require.js" data-main="js/main"></script>
 
 <!-- END CREDITS -->
+
 <!-- END HOME CONTENT -->
+
   </body>
 
 </html>
